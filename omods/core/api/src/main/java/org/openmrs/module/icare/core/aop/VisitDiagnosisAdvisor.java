@@ -62,7 +62,7 @@ public class VisitDiagnosisAdvisor extends StaticMethodMatcherPointcutAdvisor im
 						// Logics to push data to external system
 
 						String diagnosisName = diagnosis.getDiagnosis().getCoded().getDisplayString();
-						String icdCode = "";
+						String icdCode = "A90";
 						Matcher matches = Pattern.compile("\\((.*?)\\)").matcher(diagnosisName);
 						while (matches.find()) {
 							icdCode = matches.group(1).toString().trim();
